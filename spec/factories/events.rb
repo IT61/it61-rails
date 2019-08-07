@@ -1,3 +1,35 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id                            :bigint           not null, primary key
+#  attendees_limit               :integer          default(-1), not null
+#  broadcast_url                 :string
+#  cover                         :string
+#  description                   :text             not null
+#  has_attendees_limit           :boolean          default(FALSE), not null
+#  has_closed_registration       :boolean          default(FALSE)
+#  link                          :string
+#  published                     :boolean          default(FALSE)
+#  published_at                  :datetime
+#  started_at                    :datetime
+#  subscribers_notification_send :boolean          default(FALSE)
+#  title                         :string           not null
+#  created_at                    :datetime         not null
+#  updated_at                    :datetime         not null
+#  organizer_id                  :integer          not null
+#  place_id                      :integer
+#
+# Indexes
+#
+#  index_events_on_organizer_id  (organizer_id)
+#  index_events_on_place_id      (place_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (place_id => places.id)
+#
+
 FactoryBot.define do
   factory :event do
     title { Faker::Esport.event }
