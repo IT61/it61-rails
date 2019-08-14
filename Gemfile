@@ -63,8 +63,10 @@ end
 
 group :development do
   gem "active_record_query_trace", require: false
+  gem "annotate"
   gem "listen"
   gem "meta_request"
+  gem "seedbank"
   gem "solargraph", require: false
 end
 

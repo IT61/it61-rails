@@ -49,6 +49,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    annotate (2.7.5)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 13.0)
     arel (9.0.0)
     ast (2.4.0)
     autoprefixer-rails (9.6.1)
@@ -397,6 +400,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    seedbank (0.5.0)
+      rake (>= 10.0)
     shoulda-callback-matchers (1.1.4)
       activesupport (>= 3)
     shoulda-matchers (4.1.2)
@@ -483,6 +488,7 @@ PLATFORMS
 DEPENDENCIES
   active_link_to
   active_record_query_trace
+  annotate
   autoprefixer-rails
   awesome_print
   bootsnap
@@ -546,6 +552,7 @@ DEPENDENCIES
   rspec-rails
   russian
   sass-rails (~> 5.0)
+  seedbank
   shoulda-callback-matchers
   shoulda-matchers
   simplecov
